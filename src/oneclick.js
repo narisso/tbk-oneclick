@@ -58,6 +58,4 @@ const OneClick = class OneClick {
   }
 };
 
-module.exports = {
-  OneClick: OneClick
-};
+module.exports = OneClick;

@@ -33,6 +33,4 @@ const Client = class Client {
   }
 };
 
-module.exports = {
-  Client: Client
-};
+module.exports = Client;

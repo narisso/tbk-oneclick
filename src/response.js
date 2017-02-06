@@ -222,6 +222,4 @@ const Response = class Response {
   }
 };
 
-module.exports = {
-  Response: Response
-};
+module.exports = Response;
