@@ -1,1 +1,1 @@
-module.exports = require('./src/oneclick');
+module.exports = require('./src/oneclick').OneClick;
