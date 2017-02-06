@@ -10,7 +10,7 @@ const Client = class Client {
     const testingLoc = 'https://tbk.orangepeople.cl/webpayserver/wswebpay/OneClickPaymentService';
     const productionLoc = 'https://webpay3g.transbank.cl:443/webpayserver/wswebpay/OneClickPaymentService';
     this.location = testing ? testingLoc : productionLoc;
-    this.client = this.createClient();
+    this.client = this.createClient(function() {});
   }
 
   createClient(cb) {
