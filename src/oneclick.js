@@ -15,7 +15,7 @@ const OneClick = class OneClick {
   initInscription(email, responseUrl, username) {
     const params = {email: email, username: username, responseURL: responseUrl};
     const request = new Request(params);
-    const d = new Document({action: 'initInscription', params: params, key: this.key, cert: this.cert});
+    const d = new Document('initInscription', params, this.key, this.cert);
     const response = this.client.request('initInscription', d.doc);
     return response;
   }
@@ -23,7 +23,7 @@ const OneClick = class OneClick {
   finishInscription(token) {
     const params = {token: token};
     const request = new Request(params);
-    const d = new Document({action: 'finishInscription', params: params, key: this.key, cert: this.cert});
+    const d = new Document('finishInscription', params, this.key, this.cert);
     const response = this.client.request('finishInscription', d.doc);
     return response;
   }
@@ -36,7 +36,7 @@ const OneClick = class OneClick {
       buyOrder: buyOrder
     };
     const request = new Request(params);
-    const d = new Document({action: 'authorize', params: params, key: this.key, cert: this.cert});
+    const d = new Document('authorize', params, this.key, this.cert);
     const response = this.client.request('Authorize', d.doc);
     return response;
   }
@@ -44,7 +44,7 @@ const OneClick = class OneClick {
   reverse(buyOrder) {
     const params = {'buyorder': buyOrder};
     const request = new Request(params);
-    const d = new Document({action: 'codeReverseOneClick', params: params, key: this.key, cert: this.cert});
+    const d = new Document('codeReverseOneClick', params, this.key, this.cert);
     const response = this.client.request('codeReverseOneClick', d.doc);
     return response;
   }
@@ -52,7 +52,7 @@ const OneClick = class OneClick {
   removeUser(tbkUser, username) {
     const params = {tbkUser: tbkUser, username: username};
     const request = new Request(params);
-    const d = new Document({action: 'removeUser', params: params, key: this.key, cert: this.cert});
+    const d = new Document('removeUser', params, this.key, this.cert);
     const response = this.client.request('removeUser', d.doc);
     return response;
   }
