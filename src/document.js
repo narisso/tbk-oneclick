@@ -6,10 +6,12 @@ const pki = require('node-forge').pki;
 
 const Document = class Document {
 
-  constructor(action, params) {
+  constructor(action, params, key = null, cert = null) {
     this._action = action;
     this._params = params;
     this.doc = this.buildDoc();
+    this._key = key;
+    this._cert = cert;
   }
 
   key() {
